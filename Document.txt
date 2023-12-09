@@ -1,0 +1,29 @@
+TaskDAO Class Documentation
+
+Purpose
+
+The TaskDAO class serves as the Data Access Object for handling tasks within the system. 
+It manages CRUD (Create, Read, Update, Delete) operations related to tasks in the connected database.
+
+Methods
+
+TaskDAO(): Constructor to establish a connection to the PostgreSQL database.
+createTask(String taskName, String taskDescription): Creates a new task in the database.
+setTaskName(String taskName): Sets the name of the task in the database.
+setTaskDescription(String taskDescription): Sets the description of the task in the database.
+markAsComplete(): Marks a task as complete in the database.
+setPriority(Priority priority): Sets the priority of the task in the database.
+setDeadline(LocalDate date): Sets the deadline of the task in the database.
+getTaskName(): Retrieves the name of the task from the database.
+
+ 
+Database Schema
+
+Tasks Table
+
+task_id: Unique identifier for tasks (Primary Key)
+task_name: Name of the task
+task_description: Description of the task
+priority: Priority level of the task (Low, Medium, High)
+deadline: Deadline date of the task
+is_complete: Flag indicating task completion status
